@@ -10,9 +10,8 @@ fi
 set -e
 
 PNG_PATH='cards/png'
-VID_TMP_PATH='tmp-vids'
 VID_OUT_PATH='upload-ready-vids'
-mkdir -p ${VID_TMP_PATH} ${VID_OUT_PATH}
+mkdir -p ${VID_OUT_PATH}
 
 TITLE_SHOW_DURATION_SECS=2
 FADE_DURATION_SECS=1
@@ -32,7 +31,6 @@ if [ ! -e "${PNG_FNAME}" ]; then
 fi
 
 BASENAME=$(basename ${PNG_FNAME/.png})
-VID_TITLECARD=${VID_TMP_PATH}/${BASENAME}-title.mxf
 VID_OUT_COMBINED=${VID_OUT_PATH}/${BASENAME}-combined.mkv
 
 if [ ! -e ${VID_IN_FNAME} ]; then
@@ -47,8 +45,8 @@ if [ -e ${VID_OUT_COMBINED} ]; then
 fi
 
 FILTER_COMPLEX="
-    [0:v]format=pix_fmts=yuva422p10le,fade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS[vid_title];
-    [1:v]format=pix_fmts=yuva422p10le,fade=t=in:st=0:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS+${TITLE_SHOW_DURATION_SECS}/TB[vid_main];
+    [0:v]format=pix_fmts=yuva420p,fade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS[vid_title];
+    [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS+${TITLE_SHOW_DURATION_SECS}/TB[vid_main];
     [vid_title][vid_main] overlay [vid];
     [2:a] afade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${AUDIO_FADE_DURATION_SECS} [aud_title];
     [3:a][4:a] amerge [aud_main_in];
@@ -57,23 +55,26 @@ FILTER_COMPLEX="
     [aud_title][aud_main] amix=duration=longest [audio]
 "
 
+DURATION=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ${VID_IN_FNAME})
+TOTAL_DURATION=$(echo $TITLE_SHOW_DURATION_SECS + $DURATION | bc)
+
 ffmpeg \
-    -v info \
+    -v warning \
     -hwaccel auto \
     -loop 1 \
     -i ${PNG_FNAME} \
     -ss ${TRIM_START} \
     -i ${VID_IN_FNAME} \
-    -i source-vids/silence.wav \
-    -i source-vids/links234-L.wav \
-    -i source-vids/witcher-R.wav \
+    -i silence-24.wav \
+    -i ${VID_IN_FNAME/V.mxf/A1.mxf} \
+    -i ${VID_IN_FNAME/V.mxf/A2.mxf} \
     -filter_complex "${FILTER_COMPLEX}" \
     -map '[vid]' \
     -map '[audio]' \
-    -pix_fmt yuv422p \
     -c:v h264 \
     -c:a mp3 \
     -crf 23 \
+    -t ${TOTAL_DURATION} \
     -y ${VID_OUT_COMBINED}
 
 echo

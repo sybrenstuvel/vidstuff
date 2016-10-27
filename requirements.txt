@@ -1,3 +1,4 @@
 awesome-slugify
 google-api-python-client
 progressbar2
+oauth2client
