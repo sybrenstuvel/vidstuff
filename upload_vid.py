@@ -27,13 +27,14 @@ presentations = gen_cards.load_json()
 pres = presentations[args.talk_id]
 
 
+# Mocking CLI options, see youtube_upload.main.main()
 class Options:
     title = pres['title']
     description = '''"%(title)s" by %(speakers)s
 Blender Conference 2016
 %(day)s %(time)s at the %(location)s.
 '''
-    privacy = 'unlisted'
+    privacy = 'unlisted'  # TODO: change to 'public'
     playlist = 'Blender Conference 2016'
     publish_at = None
     location = None
