@@ -3,3 +3,5 @@ _concat-*.txt
 /source-vids/
 /tmp-vids/
 /upload-ready-vids/
+*.pyc
+__pycache__

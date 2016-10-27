@@ -1,1 +1,3 @@
 awesome-slugify
+google-api-python-client
+progressbar2
