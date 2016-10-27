@@ -18,9 +18,9 @@ TITLE_SHOW_DURATION_SECS=2
 FADE_DURATION_SECS=1
 
 VID_IN_FNAME="$1"
-TALK_ID=$(($2 + 0))
-TRIM_START=$(($3 + 0))
-TRIM_END=$(($4 + 0))
+TALK_ID="$2"
+TRIM_START="$3"
+TRIM_END="$4"
 
 PNG_FNAME=$(ls ${PNG_PATH}/${TALK_ID}-*.png)
 if [ ! -e "${PNG_FNAME}" ]; then
@@ -43,7 +43,6 @@ if [ -e ${VID_OUT_COMBINED} ]; then
     read dummy
 fi
 
-
 FILTER_COMPLEX="
     [0:v]format=pix_fmts=yuva422p10le,fade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS[va0];
     [1:v]format=pix_fmts=yuva422p10le,fade=t=in:st=0:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS+${TITLE_SHOW_DURATION_SECS}/TB[va1];
@@ -51,7 +50,10 @@ FILTER_COMPLEX="
 "
 
 # Show titlecard and fade into source video.
-ffmpeg -hwaccel auto \
+echo "Rendering & fading title card."
+ffmpeg \
+    -v warning \
+    -hwaccel auto \
     -loop 1 \
     -i ${PNG_FNAME} \
     -ss ${TRIM_START} -i ${VID_IN_FNAME} \
@@ -66,14 +68,26 @@ ffmpeg -hwaccel auto \
     -f mxf \
     -y ${VID_TITLECARD}
 
+SOURCE_DURATION=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ${VID_IN_FNAME})
+INPOINT=$(echo $FADE_DURATION_SECS + $TRIM_START | bc)
+OUTPOINT=$(echo $SOURCE_DURATION - $TRIM_END | bc)
+
 # Combine without re-encoding.
+echo "Concatenating remaining video."
 cat > _concat-$$.txt <<EOT
 file '${VID_TITLECARD}'
 
 file '${VID_IN_FNAME}'
-inpoint $((${FADE_DURATION_SECS} + ${TRIM_START}))
+inpoint ${INPOINT}
+outpoint ${OUTPOINT}
 EOT
-ffmpeg -f concat -i _concat-$$.txt -map 0 -c copy -y ${VID_OUT_COMBINED}
+
+ffmpeg \
+    -v warning \
+    -f concat -i _concat-$$.txt \
+    -map 0 \
+    -c copy \
+    -y ${VID_OUT_COMBINED}
 
 rm -f concat-$$.txt
 
