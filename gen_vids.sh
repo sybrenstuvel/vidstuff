@@ -17,6 +17,9 @@ mkdir -p ${VID_TMP_PATH} ${VID_OUT_PATH}
 TITLE_SHOW_DURATION_SECS=2
 FADE_DURATION_SECS=1
 
+AUDIO_FADE_DURATION_SECS=0.5
+TITLE_SHOW_DURATION_MSECS=$((TITLE_SHOW_DURATION_SECS * 1000))
+
 VID_IN_FNAME="$1"
 TALK_ID="$2"
 TRIM_START="$3"
@@ -37,28 +40,35 @@ if [ ! -e ${VID_IN_FNAME} ]; then
     exit 3
 fi
 
-if [ -e ${VID_OUT_COMBINED} ]; then
-    echo "Destination video ${VID_OUT_COMBINED} already exists."
-    echo "Press [ENTER] to overwrite, [CTRL]+[C] to abort."
-    read dummy
-fi
+# if [ -e ${VID_OUT_COMBINED} ]; then
+#     echo "Destination video ${VID_OUT_COMBINED} already exists."
+#     echo "Press [ENTER] to overwrite, [CTRL]+[C] to abort."
+#     read dummy
+# fi
 
 FILTER_COMPLEX="
     [0:v]format=pix_fmts=yuva422p10le,fade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS[va0];
     [1:v]format=pix_fmts=yuva422p10le,fade=t=in:st=0:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS+${TITLE_SHOW_DURATION_SECS}/TB[va1];
-    [va0][va1]overlay[outv]
+    [va0][va1] overlay [out];
+    [1:a] afade=t=in:st=0:d=${FADE_DURATION_SECS} [audio1_fadein];
+    [audio1_fadein] adelay=${TITLE_SHOW_DURATION_MSECS}|${TITLE_SHOW_DURATION_MSECS} [audio1];
+    [2:a] afade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${AUDIO_FADE_DURATION_SECS} [audio0];
+    [audio0][audio1] amix=duration=longest [audio]
 "
 
 # Show titlecard and fade into source video.
 echo "Rendering & fading title card."
 ffmpeg \
-    -v warning \
+    -v info \
     -hwaccel auto \
     -loop 1 \
     -i ${PNG_FNAME} \
-    -ss ${TRIM_START} -i ${VID_IN_FNAME} \
+    -ss ${TRIM_START} \
+    -i ${VID_IN_FNAME} \
+    -i source-vids/witcher.wav \
     -filter_complex "${FILTER_COMPLEX}" \
-    -map '[outv]' \
+    -map '[out]' \
+    -map '[audio]' \
     -t $((TITLE_SHOW_DURATION_SECS + FADE_DURATION_SECS)) \
     -r 25 \
     -pix_fmt yuv422p10le \
