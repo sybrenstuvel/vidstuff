@@ -59,7 +59,7 @@ def load_json():
     if not os.path.exists(json_fname):
         subprocess.check_call([
             'curl',
-            'https://www.blender.org/conference/2016/presentations?format=json',
+            'https://www.blender.org/conference/2017/presentations?format=json',
             '-opresentations.json',
         ])
     with open(json_fname, 'r', encoding='utf-8') as infile:

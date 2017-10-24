@@ -31,11 +31,11 @@ pres = presentations[args.talk_id]
 class Options:
     title = pres['title']
     description = '''"%(title)s" by %(speakers)s
-Blender Conference 2016
+Blender Conference 2017
 %(day)s %(time)s at the %(location)s.
 '''
     privacy = 'unlisted'  # TODO: change to 'public'
-    playlist = 'Blender Conference 2016'
+    playlist = 'Blender Conference 2017'
     publish_at = None
     location = None
     recording_date = None
