@@ -64,7 +64,6 @@ def load_json():
         ])
     with open(json_fname, 'r', encoding='utf-8') as infile:
         presentations = json.load(infile)
-        presentations = presentations['presentations']
     return presentations
 
 

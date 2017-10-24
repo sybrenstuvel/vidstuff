@@ -1,417 +1,443 @@
 {
-  "presentations": {
-    "231": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "Francesco Siddi, Pablo Vazquez", 
-      "time": "15:00", 
-      "title": "Blender Network annual report"
-    }, 
-    "232": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Ton Roosendaal", 
-      "time": "11:00", 
-      "title": "Opening and Keynote"
-    }, 
-    "233": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Gleb Alexandrov", 
-      "time": "11:00", 
-      "title": "Realistic Lighting Hacks in Blender"
-    }, 
-    "234": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Alice Plebe, Giorgio Grasso", 
-      "time": "10:30", 
-      "title": "Simulating fire outbreaks in industrial plants"
-    }, 
-    "235": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "Alessandro Passariello", 
-      "time": "13:00", 
-      "title": "Blender Italia Community"
-    }, 
-    "236": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Xavi H.Orom\u00ed", 
-      "time": "12:30", 
-      "title": "Psious case study: Phobias, VR & Blender."
-    }, 
-    "238": {
-      "day": "Friday 28 October", 
-      "location": "Salon", 
-      "speakers": "Julien Duroure", 
-      "time": "12:00", 
-      "title": "BleRiFa, toolset for rigging and animation"
-    }, 
-    "242": {
-      "day": "Sunday 30 October", 
-      "location": "Salon", 
-      "speakers": "James Crowther", 
-      "time": "14:30", 
-      "title": "CrowdRender - Super Computing for everyone"
-    }, 
-    "243": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Mathilde Ampe", 
-      "time": "12:00", 
-      "title": "Automotive Design with Blender - Year 2"
-    }, 
-    "244": {
-      "day": "Friday 28 October", 
-      "location": "Salon", 
-      "speakers": "Mathias Fontmarty", 
-      "time": "14:00", 
-      "title": "Blender in a video game production pipeline"
-    }, 
-    "245": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Alexander Romanov", 
-      "time": "14:00", 
-      "title": "Blend4Web and Blender: the Present and the Future"
-    }, 
-    "248": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "Mikhail Luzyanin", 
-      "time": "11:00", 
-      "title": "Creating Games with Blender and Blend4Web"
-    }, 
-    "250": {
-      "day": "Sunday 30 October", 
-      "location": "Salon", 
-      "speakers": "Bartek Skorupa", 
-      "time": "11:00", 
-      "title": "Naked Truth about Physically Based Shading"
-    }, 
-    "252": {
-      "day": "Friday 28 October", 
-      "location": "Salon", 
-      "speakers": "Daniel Fairhead", 
-      "time": "16:00", 
-      "title": "Live puppets in a 3D universe"
-    }, 
-    "254": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "Jonathan Lampel", 
-      "time": "17:00", 
-      "title": "Fantastic Lighting: Connecting Theory and Practice"
-    }, 
-    "255": {
-      "day": "Friday 28 October", 
-      "location": "Salon", 
-      "speakers": "Zacharias Reinhardt", 
-      "time": "15:00", 
-      "title": "Successfully developing Artwork in Blender"
-    }, 
-    "256": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Daniel  Martinez Lara", 
-      "time": "14:30", 
-      "title": "Grease Pencil and EasyRigging future developments"
-    }, 
-    "259": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Richard Colburn", 
-      "time": "14:00", 
-      "title": "Blender as a garment design tool"
-    }, 
-    "260": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Nikos Priniotakis", 
-      "time": "15:30", 
-      "title": "A new 100% blender degree in a french university"
-    }, 
-    "261": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Richard van der Oost", 
-      "time": "16:00", 
-      "title": "Using Blender to protect athletes"
-    }, 
-    "262": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Tobias Guenther", 
-      "time": "13:30", 
-      "title": "Look Development with Cycles"
-    }, 
-    "264": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Rainer Trummer", 
-      "time": "16:00", 
-      "title": "Using Blender in motorcycle and powerboat design"
-    }, 
-    "265": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Kevin Healy", 
-      "time": "13:00", 
-      "title": "Point Density Texture goes Boom!"
-    }, 
-    "266": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Thomas Haschka", 
-      "time": "17:30", 
-      "title": "Usage of Blender in Computer Aided Engineering"
-    }, 
-    "267": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Pavel Siska", 
-      "time": "12:00", 
-      "title": "Making of Saurora - Visual Effects"
-    }, 
-    "268": {
-      "day": "Sunday 30 October", 
-      "location": "Salon", 
-      "speakers": "Olm-e", 
-      "time": "13:00", 
-      "title": "from Aethera Worlds to Element6: art and VR in BGE"
-    }, 
-    "270": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Martina Fr\u00f6schl", 
-      "time": "15:30", 
-      "title": "Microscopic 3D data processing in Blender"
-    }, 
-    "271": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Daniele De Luca, Luigi Verri", 
-      "time": "15:00", 
-      "title": "Isabella d\u2019Este: Virtual Studiolo - the video"
-    }, 
-    "274": {
-      "day": "Sunday 30 October", 
-      "location": "Salon", 
-      "speakers": "Lech Sokolowski", 
-      "time": "12:00", 
-      "title": "Chocofur studio renering techniques"
-    }, 
-    "276": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Paul Melis", 
-      "time": "12:30", 
-      "title": "Cycles: the paths to success"
-    }, 
-    "277": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "Miro Horvath", 
-      "time": "14:00", 
-      "title": "Virtual landscapes with Blender Terrain Tools"
-    }, 
-    "280": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "hansi raber", 
-      "time": "15:00", 
-      "title": "Oscilloscope Music and Blender"
-    }, 
-    "281": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Mike Erwin", 
-      "time": "14:00", 
-      "title": "Viewport 2.8: Oh the Possibilities!"
-    }, 
-    "283": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Rob Tuytel", 
-      "time": "15:00", 
-      "title": "The Art of 3D Environments"
-    }, 
-    "285": {
-      "day": "Sunday 30 October", 
-      "location": "Salon", 
-      "speakers": "Frederik Steinmetz", 
-      "time": "16:00", 
-      "title": "Mastering Toon Lighting, Compositing and Freestyle"
-    }, 
-    "286": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Ton Roosendaal", 
-      "time": "13:30", 
-      "title": "Cycles Roadmap presentation"
-    }, 
-    "287": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Sergey Sharybin", 
-      "time": "14:30", 
-      "title": "6 tips from Sergey to make your life happier"
-    }, 
-    "288": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Andrew Price", 
-      "time": "10:00", 
-      "title": "The 7 Habits of Highly Effective Artists"
-    }, 
-    "289": {
-      "day": "Friday 28 October", 
-      "location": "Salon", 
-      "speakers": "Olivier Amrein", 
-      "time": "13:00", 
-      "title": "French-speaking users Community Meeting"
-    }, 
-    "290": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "Julia Velkova", 
-      "time": "10:30", 
-      "title": "Open movies and radical sharing online"
-    }, 
-    "291": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Aurel Gruber", 
-      "time": "16:30", 
-      "title": "UV unwrapping gets an overhaul"
-    }, 
-    "292": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Jonathan Lampel", 
-      "time": "16:30", 
-      "title": "Building a Market for Blender Products"
-    }, 
-    "293": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "MAD Entertainment", 
-      "time": "11:30", 
-      "title": "MAD Animation Studio: the Blender takeover"
-    }, 
-    "294": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Monique Dewanchand", 
-      "time": "13:30", 
-      "title": "Blender for school aged students"
-    }, 
-    "295": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Cl\u00e9ment Pellegrini",
-      "time": "17:00", 
-      "title": "Smart slicing in Blender"
-    }, 
-    "296": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Jason Schleifer", 
-      "time": "11:30", 
-      "title": "Nimble Collective - Pipeline in the Cloud"
-    }, 
-    "298": {
-      "day": "Friday 28 October", 
-      "location": "Theater", 
-      "speakers": "Hjalti Hjalmarsson", 
-      "time": "17:00", 
-      "title": "The Appeal of Animation"
-    }, 
-    "299": {
-      "day": "Friday 28 October", 
-      "location": "Other", 
-      "speakers": "Francesco Siddi", 
-      "time": "09:30", 
-      "title": "Doors open, registration"
-    }, 
-    "300": {
-      "day": "Saturday 29 October", 
-      "location": "Other", 
-      "speakers": "Francesco Siddi", 
-      "time": "09:00", 
-      "title": "Doors open, registration"
-    }, 
-    "301": {
-      "day": "Sunday 30 October", 
-      "location": "Other", 
-      "speakers": "Francesco Siddi", 
-      "time": "09:30", 
-      "title": "Doors open, registration"
-    }, 
-    "302": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Olivier Amrein", 
-      "time": "18:00", 
-      "title": "Open Stage"
-    }, 
-    "303": {
-      "day": "Friday 28 October", 
-      "location": "Other", 
-      "speakers": "Francesco Siddi", 
-      "time": "19:00", 
-      "title": "Suzanne Festival Screening"
-    }, 
-    "304": {
-      "day": "Friday 28 October", 
-      "location": "Other", 
-      "speakers": "Francesco Siddi", 
-      "time": "21:30", 
-      "title": "Suzanne Festival Screening"
-    }, 
-    "305": {
-      "day": "Saturday 29 October", 
-      "location": "Other", 
-      "speakers": "Francesco Siddi", 
-      "time": "20:30", 
-      "title": "Dinner at Wagamama"
-    }, 
-    "306": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Ton Roosendaal", 
-      "time": "17:00", 
-      "title": "Closing event"
-    }, 
-    "307": {
-      "day": "Sunday 30 October", 
-      "location": "Salon", 
-      "speakers": "Ton Roosendaal", 
-      "time": "15:00", 
-      "title": "Blender Developers - ask us anything"
-    }, 
-    "308": {
-      "day": "Saturday 29 October", 
-      "location": "Theater", 
-      "speakers": "Lubos Lenco", 
-      "time": "12:30", 
-      "title": "Armory: Real-Time 3D Engine in Blender"
-    }, 
-    "309": {
-      "day": "Saturday 29 October", 
-      "location": "Salon", 
-      "speakers": "dr. Sybren A. St\u00fcvel", 
-      "time": "16:00", 
-      "title": "Develop add-ons like a pro"
-    }, 
-    "310": {
-      "day": "Sunday 30 October", 
-      "location": "Theater", 
-      "speakers": "Ton Roosendaal", 
-      "time": "10:30", 
-      "title": "Agent 327 - a feature film in progress"
-    }
+  "314": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Ton Roosendaal", 
+    "time": "11:00", 
+    "title": "Keynote"
+  }, 
+  "318": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Dimitris Christou", 
+    "time": "14:00", 
+    "title": "Creative tips for creative creators"
+  }, 
+  "321": {
+    "day": "Sunday 29 October", 
+    "location": "Salon", 
+    "speakers": "Blender Italia", 
+    "time": "12:30", 
+    "title": "Blender Italia Community Meeting"
+  }, 
+  "322": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Adam Kalisz", 
+    "time": "15:30", 
+    "title": "Academic usage of Blender at Ohm and FAU"
+  }, 
+  "323": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "David McDermott, David Whelan", 
+    "time": "15:00", 
+    "title": "From Titanic to the Moon: Blender in VR Production"
+  }, 
+  "325": {
+    "day": "Sunday 29 October", 
+    "location": "Salon", 
+    "speakers": "Jonatan Bijl", 
+    "time": "16:00", 
+    "title": "Animating Container Terminals for lazy people"
+  }, 
+  "326": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Gleb Alexandrov", 
+    "time": "13:30", 
+    "title": "The Secret of Making High-Quality Art (in Blender and Everywhere)"
+  }, 
+  "327": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Midge Sinnaeve (The Mantissa)", 
+    "time": "12:30", 
+    "title": "Getting Weird with The Mantissa"
+  }, 
+  "328": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Paul Siedler", 
+    "time": "16:30", 
+    "title": "Blender in the game industry"
+  }, 
+  "329": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "Chris McFall", 
+    "time": "13:30", 
+    "title": "Rigging for Formlessness"
+  }, 
+  "330": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Shigeto Maeda", 
+    "time": "11:00", 
+    "title": "Using 3D print services, making your own products."
+  }, 
+  "331": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Yuri Kovelenov", 
+    "time": "10:30", 
+    "title": "Blender on the Verge of the 3D Web Industry"
+  }, 
+  "332": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Relja Trajkovi\u0107", 
+    "time": "16:00", 
+    "title": "Automating motion graphics with Blender"
+  }, 
+  "334": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Olivier Amrein", 
+    "time": "18:00", 
+    "title": "Open Stage / Lightning talks"
+  }, 
+  "335": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Nikos Priniotakis", 
+    "time": "18:00", 
+    "title": "New 3D facial reconstruction approach"
+  }, 
+  "337": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Metalab SAT", 
+    "time": "16:30", 
+    "title": "The \u00c9dition In Situ (EiS) platform"
+  }, 
+  "339": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Aidy Burrows", 
+    "time": "12:00", 
+    "title": "Space VFX (Spoiler Alert : We Cheated)"
+  }, 
+  "340": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Julien Duroure, Olivier Amrein", 
+    "time": "13:00", 
+    "title": "French-speaking users Community Meeting"
+  }, 
+  "341": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Daniel  Martinez Lara", 
+    "time": "11:30", 
+    "title": "\"Hero\" a Blender '2D' open movie project with Grease Pencil"
+  }, 
+  "342": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "C B ARUN KUMAR", 
+    "time": "15:00", 
+    "title": "Teaching Blender in an Autodesk Universe"
+  }, 
+  "343": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Pablo L\u00f3pez Soriano", 
+    "time": "12:00", 
+    "title": "Chickens, robots and squishies. Animation case study."
+  }, 
+  "344": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Joel Bernis, Henri Hebeisen", 
+    "time": "14:00", 
+    "title": "FutureFactory: Blender to visualize the future"
+  }, 
+  "345": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Rainer Trummer", 
+    "time": "10:30", 
+    "title": "The Path To High-End 3D Vehicle Visualisation"
+  }, 
+  "346": {
+    "day": "Sunday 29 October", 
+    "location": "Salon", 
+    "speakers": "Theodore Dounas", 
+    "time": "16:30", 
+    "title": "Dancing Dream of the Red Chamber"
+  }, 
+  "347": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Pascal Sch\u00f6n", 
+    "time": "13:30", 
+    "title": "Creation of an open industry material format"
+  }, 
+  "351": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Vasilii Shishkin", 
+    "time": "12:00", 
+    "title": "Creating orthopedic surgical implants with Blender"
+  }, 
+  "352": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Alice Plebe", 
+    "time": "14:00", 
+    "title": "Lighting Design by Genetic Evolution"
+  }, 
+  "353": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "David Baron ", 
+    "time": "12:30", 
+    "title": "Dutch - Amsterdam users Community Meeting"
+  }, 
+  "356": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Protocube Reply", 
+    "time": "15:30", 
+    "title": "Fixed, from limits to possibilities (B4W)"
+  }, 
+  "357": {
+    "day": "Sunday 29 October", 
+    "location": "Salon", 
+    "speakers": "Jonathan  Williamson", 
+    "time": "15:00", 
+    "title": "How to build a Blender business - one person at a time"
+  }, 
+  "358": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "Sebasti\u00e1n Barschkis", 
+    "time": "16:30", 
+    "title": "Next Generation Fluid Simulations with Mantaflow"
+  }, 
+  "359": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Alexander Mitzkus", 
+    "time": "16:30", 
+    "title": "Metaballism: Metaballs as Swiss Army Knife"
+  }, 
+  "360": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "Matthieu Dupont de Dinechin", 
+    "time": "17:30", 
+    "title": "Blender for the architect: t's much more than viz"
+  }, 
+  "362": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Gareth Qually", 
+    "time": "17:00", 
+    "title": "You can lead a designer to water..."
+  }, 
+  "363": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Brent Patterson", 
+    "time": "11:30", 
+    "title": "Projection Mapping with Blender"
+  }, 
+  "366": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Paolo Acampora", 
+    "time": "14:30", 
+    "title": "The power of the rig: creativity over complexity"
+  }, 
+  "368": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "Bartek Skorupa", 
+    "time": "14:00", 
+    "title": "Color Management for humans"
+  }, 
+  "371": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Mauricio Flores", 
+    "time": "10:00", 
+    "title": "\"The Rustle of Leaves\" Teaser for a feature film"
+  }, 
+  "372": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Flavio Perez, Damien Picard", 
+    "time": "13:30", 
+    "title": "Cut It Out: a cutout feature film in Blender"
+  }, 
+  "373": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Riccardo Gagliarducci", 
+    "time": "16:30", 
+    "title": "Interactive Real-time Tv 3d Graphic"
+  }, 
+  "374": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Dominic Agoro-Ombaka", 
+    "time": "12:00", 
+    "title": "When Boats Fly: Accident Reconstruction in Blender"
+  }, 
+  "375": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Zacharias Reinhardt", 
+    "time": "14:00", 
+    "title": "Advanced Sculpting in Blender"
+  }, 
+  "376": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "Paul Melis", 
+    "time": "12:00", 
+    "title": "Visualizing large-scale simulations of blood"
+  }, 
+  "377": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Paul Chambers", 
+    "time": "16:00", 
+    "title": "Proximity light from HDRIs for better integration"
+  }, 
+  "381": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "dr. Sybren A. St\u00fcvel", 
+    "time": "11:00", 
+    "title": "Scripting for Artists"
+  }, 
+  "382": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Sean Kennedy", 
+    "time": "17:30", 
+    "title": "More Gruntwork VFX - Using Blender for television VFX"
+  }, 
+  "383": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "MAD Entertainment", 
+    "time": "15:00", 
+    "title": "Making of \"Cinderella, the Cat\""
+  }, 
+  "384": {
+    "day": "Friday 27 October", 
+    "location": "Salon", 
+    "speakers": "Dillon Gu", 
+    "time": "15:30", 
+    "title": "Creating a Short Film shot in 1 hour as 1 person"
+  }, 
+  "385": {
+    "day": "Sunday 29 October", 
+    "location": "Salon", 
+    "speakers": "Pierre Ducos, Christophe SEUX, Jeremy Clapin", 
+    "time": "17:00", 
+    "title": "\"I lost my body\" : feature film -work in progress-"
+  }, 
+  "386": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Ton Roosendaal", 
+    "time": "17:30", 
+    "title": "Blender 2.8 design and progress report"
+  }, 
+  "387": {
+    "day": "Sunday 29 October", 
+    "location": "Salon", 
+    "speakers": "Ton Roosendaal", 
+    "time": "13:30", 
+    "title": "Blender Developers \"Ask us anything\""
+  }, 
+  "388": {
+    "day": "Friday 27 October", 
+    "location": "Theater", 
+    "speakers": "Hjalti Hjalmarsson", 
+    "time": "14:30", 
+    "title": "The Principles of Animation"
+  }, 
+  "389": {
+    "day": "Saturday 28 October", 
+    "location": "Theater", 
+    "speakers": "Hjalti Hjalmarsson", 
+    "time": "12:30", 
+    "title": "The Daily Dweebs"
+  }, 
+  "391": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Ton Roosendaal", 
+    "time": "17:30", 
+    "title": "Conference closing event"
+  }, 
+  "392": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Francesco Siddi, Hjalti Hjalmarsson, Andy Goralczyk", 
+    "time": "10:30", 
+    "title": "Making of Agent 327, Operation Barbershop"
+  }, 
+  "393": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Thomas Beck", 
+    "time": "15:30", 
+    "title": "Eevee - Next Generation Graphics For Blender 2.8"
+  }, 
+  "394": {
+    "day": "Sunday 29 October", 
+    "location": "Theater", 
+    "speakers": "Stefan Werner", 
+    "time": "17:00", 
+    "title": "Cycles for animated feature film production"
+  }, 
+  "395": {
+    "day": "Friday 27 October", 
+    "location": "Other", 
+    "speakers": "Francesco Siddi", 
+    "time": "19:00", 
+    "title": "Suzanne Festival Screening"
+  }, 
+  "396": {
+    "day": "Sunday 29 October", 
+    "location": "Other", 
+    "speakers": "Francesco Siddi", 
+    "time": "09:30", 
+    "title": "Doors open, registration"
+  }, 
+  "397": {
+    "day": "Saturday 28 October", 
+    "location": "Other", 
+    "speakers": "Francesco Siddi", 
+    "time": "09:00", 
+    "title": "Doors open, registration"
+  }, 
+  "398": {
+    "day": "Friday 27 October", 
+    "location": "Other", 
+    "speakers": "Francesco Siddi", 
+    "time": "09:30", 
+    "title": "Doors open, registration"
+  }, 
+  "399": {
+    "day": "Friday 27 October", 
+    "location": "Other", 
+    "speakers": "Francesco Siddi", 
+    "time": "21:30", 
+    "title": "Suzanne Festival Screening"
+  }, 
+  "401": {
+    "day": "Saturday 28 October", 
+    "location": "Salon", 
+    "speakers": "Peter Kemp, Monique Dewanchand", 
+    "time": "16:00", 
+    "title": "Education Community Meeting"
   }
 }
