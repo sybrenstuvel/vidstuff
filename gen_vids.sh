@@ -44,7 +44,7 @@ if [ -e ${VID_OUT_COMBINED} ]; then
     read dummy
 fi
 
-FFMPEG="ffmpeg -v warning -hwaccel auto"
+FFMPEG="ffmpeg -hide_banner -v info -hwaccel auto"
 
 FILTER_COMPLEX="
     [0:v] yadif [vid];
@@ -86,6 +86,7 @@ $FFMPEG \
 echo
 echo " [*] Encoding CARD"
 $FFMPEG \
+    -v warning \
     -loop 1 \
     -i ${PNG_FNAME} \
     -i silence-24.wav \
