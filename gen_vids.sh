@@ -31,6 +31,7 @@ BASENAME=$(basename ${PNG_FNAME/.png})
 VID_OUT_COMBINED=${VID_OUT_PATH}/${BASENAME}-combined.mkv
 VID_TMP_CARD=${VID_TMP_PATH}/${BASENAME}-card.mkv
 VID_TMP_TALK=${VID_TMP_PATH}/${BASENAME}-talk.mkv
+VID_TMP_META=${VID_TMP_PATH}/${BASENAME}-meta.xml
 
 if [ ! -e ${VID_IN_FNAME} ]; then
     echo "Source video ${VID_IN_FNAME} does not exist, aborting." >&2
@@ -93,7 +94,12 @@ $FFMPEG \
     -y ${VID_TMP_CARD}
 
 echo
+echo " [*] Generating Metadata"
+python3 gen_tags.py ${TALK_ID} > ${VID_TMP_META}
+
 echo " [*] Merging CARD + TALK → ${VID_OUT_COMBINED}"
-mkvmerge --quiet -o ${VID_OUT_COMBINED} ${VID_TMP_CARD} + ${VID_TMP_TALK}
+mkvmerge --global-tags ${VID_TMP_META} --quiet \
+    -o ${VID_OUT_COMBINED} \
+    ${VID_TMP_CARD} + ${VID_TMP_TALK}
 
 echo ' [*] DØNER'
