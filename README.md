@@ -4,7 +4,9 @@
 
 1. Run `git submodule init` and `git submodule update` if you haven't done this yet. Doing it twice
    is fine too.
-2. Create a Python 3 virtualenv and `pip install -U -r requirements.txt`
+2. Create a Python 3 virtualenv and `pip install -U -r requirements.txt`.
+3. Install `ffmpeg` and `mkvtoolnix`.
+
 
 ## Updating from last year to this year
 
@@ -15,6 +17,7 @@
    JSON](https://www.blender.org/conference/2017/presentations?format=json) from the conference
    website and generates the individual cards in `cards/png` and `cards/svg`.
 
+
 ## Preparing a video for upload to YouTube
 
 1. Get the talk ID from the [conference site](https://www.blender.org/conference/2017/presentations)
@@ -23,6 +26,7 @@
 3. Watch the talk video, and write down how many seconds to trim from the start and the end.
    In the next steps, we assume these are respectively 32 and 47 seconds.
 4. Run `./gen_vids.sh 813 /media/disk1/Capture00412.mov 32 47`
+
 
 ## Uploading a video to YouTube
 
