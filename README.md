@@ -5,7 +5,7 @@
 1. Run `git submodule init` and `git submodule update` if you haven't done this yet. Doing it twice
    is fine too.
 2. Create a Python 3 virtualenv and `pip install -U -r requirements.txt`.
-3. Install `ffmpeg` and `mkvtoolnix`.
+3. Install ffmpeg, mkvtoolnix, and inkscape.
 
 
 ## Updating from last year to this year
