@@ -6,6 +6,7 @@
    is fine too.
 2. Create a Python 3 virtualenv and `pip install -U -r requirements.txt`.
 3. Install ffmpeg, mkvtoolnix, and inkscape.
+4. Install the fonts from the 'fonts' directory.
 
 
 ## Updating from last year to this year
