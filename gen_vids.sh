@@ -49,7 +49,7 @@ FFMPEG="ffmpeg -hide_banner -v info -hwaccel auto"
 FILTER_COMPLEX="
     [0:v] yadif [vid];
     [1:a] channelmap=map=0-0|1-1 [aud_stereo];
-    [aud_stereo] dynaudnorm=p=0.9:r=1.0:b=1 [audio]
+    [aud_stereo] dynaudnorm=p=0.9:r=1.0 [audio]
 "
 
 # Durations of the talk itself, after trimming the start & end.
