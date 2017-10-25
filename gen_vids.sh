@@ -3,7 +3,7 @@
 # Assumes NONE of the filenames have spaces in them.
 
 if [ -z "$3" ]; then
-    echo "Usage: $0 <source.mxf> <talk ID> <seconds trim from start> <seconds trim from end>" >&2
+    echo "Usage: $0 <source.mov> <talk ID> <seconds trim from start> <seconds trim from end>" >&2
     exit 1
 fi
 
