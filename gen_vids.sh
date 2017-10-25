@@ -10,14 +10,11 @@ fi
 set -e
 
 PNG_PATH='cards/png'
+VID_TMP_PATH='tmp-vids'
 VID_OUT_PATH='upload-ready-vids'
-mkdir -p ${VID_OUT_PATH}
+mkdir -p ${VID_OUT_PATH} ${VID_TMP_PATH}
 
 TITLE_SHOW_DURATION_SECS=2
-FADE_DURATION_SECS=1
-
-AUDIO_FADE_DURATION_SECS=1
-TITLE_SHOW_DURATION_MSECS=$((TITLE_SHOW_DURATION_SECS * 1000))
 
 VID_IN_FNAME="$1"
 TALK_ID="$2"
@@ -32,6 +29,8 @@ fi
 
 BASENAME=$(basename ${PNG_FNAME/.png})
 VID_OUT_COMBINED=${VID_OUT_PATH}/${BASENAME}-combined.mkv
+VID_TMP_CARD=${VID_TMP_PATH}/${BASENAME}-card.mkv
+VID_TMP_TALK=${VID_TMP_PATH}/${BASENAME}-talk.mkv
 
 if [ ! -e ${VID_IN_FNAME} ]; then
     echo "Source video ${VID_IN_FNAME} does not exist, aborting." >&2
@@ -44,38 +43,57 @@ if [ -e ${VID_OUT_COMBINED} ]; then
     read dummy
 fi
 
+FFMPEG="ffmpeg -v warning -hwaccel auto"
+
 FILTER_COMPLEX="
-    [0:v]format=pix_fmts=yuva420p,fade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS[vid_title];
-    [1:v]format=pix_fmts=yuva420p,fade=t=in:st=0:d=${FADE_DURATION_SECS}:alpha=1,setpts=PTS-STARTPTS+${TITLE_SHOW_DURATION_SECS}/TB[vid_main];
-    [vid_title][vid_main] overlay [vid];
-    [2:a] afade=t=out:st=${TITLE_SHOW_DURATION_SECS}:d=${AUDIO_FADE_DURATION_SECS} [aud_title];
-    [3:a][4:a] amerge [aud_main_in];
-    [aud_main_in] afade=t=in:st=0:d=${FADE_DURATION_SECS} [aud_main_faded];
-    [aud_main_faded] adelay=${TITLE_SHOW_DURATION_MSECS}|${TITLE_SHOW_DURATION_MSECS} [aud_main];
-    [aud_title][aud_main] amix=duration=longest [audio]
+    [0:v] yadif [vid];
+    [1:a] channelmap=map=0-0|1-1 [aud_stereo];
+    [aud_stereo] dynaudnorm=p=0.9:r=1.0:b=1 [audio]
 "
 
+# Durations of the talk itself, after trimming the start & end.
 DURATION=$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 ${VID_IN_FNAME})
-TOTAL_DURATION=$(echo $TITLE_SHOW_DURATION_SECS + $DURATION | bc)
+FINAL_DURATION=$(echo $DURATION - $TRIM_END - $TRIM_START | bc)
 
-ffmpeg \
-    -v warning \
-    -hwaccel auto \
-    -loop 1 \
-    -i ${PNG_FNAME} \
+VID_ENCODING_OPTS="
+    -c:v h264
+    -pix_fmt yuv422p
+    -crf 23
+    -g 15
+    -preset:v veryfast
+    -c:a aac
+    -b:a 192k
+    -map_metadata -1
+    -aspect 16:9
+"
+
+# Input file is loaded twice, so that we can apply itsoffset to the audio only.
+echo " [*] Encoding TALK"
+$FFMPEG \
     -ss ${TRIM_START} \
     -i ${VID_IN_FNAME} \
-    -i silence-24.wav \
-    -i ${VID_IN_FNAME/V.mxf/A1.mxf} \
-    -i ${VID_IN_FNAME/V.mxf/A2.mxf} \
+    -ss ${TRIM_START} \
+    -itsoffset 0.2 \
+    -i ${VID_IN_FNAME} \
     -filter_complex "${FILTER_COMPLEX}" \
     -map '[vid]' \
     -map '[audio]' \
-    -c:v h264 \
-    -c:a mp3 \
-    -crf 23 \
-    -t ${TOTAL_DURATION} \
-    -y ${VID_OUT_COMBINED}
+    ${VID_ENCODING_OPTS} \
+    -t ${FINAL_DURATION} \
+    -y ${VID_TMP_TALK}
 
 echo
-echo 'DØNER'
+echo " [*] Encoding CARD"
+$FFMPEG \
+    -loop 1 \
+    -i ${PNG_FNAME} \
+    -i silence-24.wav \
+    ${VID_ENCODING_OPTS} \
+    -t ${TITLE_SHOW_DURATION_SECS} \
+    -y ${VID_TMP_CARD}
+
+echo
+echo " [*] Merging CARD + TALK → ${VID_OUT_COMBINED}"
+mkvmerge --quiet -o ${VID_OUT_COMBINED} ${VID_TMP_CARD} + ${VID_TMP_TALK}
+
+echo ' [*] DØNER'
