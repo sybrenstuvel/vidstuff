@@ -5,3 +5,5 @@ _concat-*.txt
 /upload-ready-vids/
 *.pyc
 __pycache__
+/youtube-upload-credentials.json
+/README.md.html
