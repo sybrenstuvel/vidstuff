@@ -32,7 +32,8 @@
 
 1. Set the right year everywhere, replacing notation like '2017' and 'bc17'
 2. Update `slide_template.svg` to the style of the year.
-3. Remove `presentations.json` and the `cards` directory to clean up from last year.
-4. Run `./gen_cards.py`, which downloads [the schedule as
+3. Install the fonts from the 'fonts' directory.
+4. Remove `presentations.json` and the `cards` directory to clean up from last year.
+5. Run `./gen_cards.py`, which downloads [the schedule as
    JSON](https://www.blender.org/conference/2017/presentations?format=json) from the conference
    website and generates the individual cards in `cards/png` and `cards/svg`.
