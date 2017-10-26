@@ -42,6 +42,7 @@ argv = [
     '--client-secrets', 'youtube-upload/client_secrets.json',
     '--credentials-file', 'youtube-upload-credentials.json',
     '--thumbnail', png_fname,
+    '--license', 'creativeCommon',
     '--open-link',
     video_fname,
 ]
