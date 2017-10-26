@@ -3,3 +3,8 @@ google-api-python-client
 progressbar2
 oauth2client
 -e ./youtube-upload
+
+# for gen_cal.py
+python-dateutil
+icalendar
+pytz
